@@ -1,0 +1,23 @@
+$ /bin/sleep 10000 &
+[1] 3754
+$ cat /proc/3754/maps
+563b5a090000-563b5a097000 r-xp 00000000 08:02 5636249                    /bin/sleep
+563b5a297000-563b5a298000 r--p 00007000 08:02 5636249                    /bin/sleep
+563b5a298000-563b5a299000 rw-p 00008000 08:02 5636249                    /bin/sleep
+563b5a914000-563b5a935000 rw-p 00000000 00:00 0                          [heap]
+7f6aa8a8d000-7f6aa955c000 r--p 00000000 08:02 924254                     /usr/lib/locale/locale-archive
+7f6aa955c000-7f6aa9743000 r-xp 00000000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f6aa9743000-7f6aa9943000 ---p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f6aa9943000-7f6aa9947000 r--p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f6aa9947000-7f6aa9949000 rw-p 001eb000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f6aa9949000-7f6aa994d000 rw-p 00000000 00:00 0
+7f6aa994d000-7f6aa9974000 r-xp 00000000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f6aa9b41000-7f6aa9b43000 rw-p 00000000 00:00 0
+7f6aa9b74000-7f6aa9b75000 r--p 00027000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f6aa9b75000-7f6aa9b76000 rw-p 00028000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f6aa9b76000-7f6aa9b77000 rw-p 00000000 00:00 0
+7ffffd594000-7ffffd5b5000 rw-p 00000000 00:00 0                          [stack]
+7ffffd5ce000-7ffffd5d1000 r--p 00000000 00:00 0                          [vvar]
+7ffffd5d1000-7ffffd5d3000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+$

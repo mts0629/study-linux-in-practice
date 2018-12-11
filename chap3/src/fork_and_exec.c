@@ -5,9 +5,14 @@
 
 static void child()
 {
-    printf("I'm child! my pid is %d.\n", getpid());
+    char *args[] = { "/bin/echo", "hello", NULL };
 
-    exit(EXIT_SUCCESS);
+    printf("I'm child! my pid is %d.\n", getpid());
+    fflush(stdout);
+    
+    execve("/bin/echo", args, NULL);
+
+    err(EXIT_FAILURE, "exec() failed");
 }
 
 static void parent(pid_t pid_c)
