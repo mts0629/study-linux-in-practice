@@ -1,0 +1,42 @@
+*** memory map before memory allocation ***
+5555e6ffc000-5555e6ffd000 r-xp 00000000 08:02 2105155                    ***/github/try_linux/chap5/bin/mmap
+5555e71fc000-5555e71fd000 r--p 00000000 08:02 2105155                    ***/github/try_linux/chap5/bin/mmap
+5555e71fd000-5555e71fe000 rw-p 00001000 08:02 2105155                    ***/github/try_linux/chap5/bin/mmap
+5555e8e7b000-5555e8e9c000 rw-p 00000000 00:00 0                          [heap]
+7f2e061aa000-7f2e06391000 r-xp 00000000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f2e06391000-7f2e06591000 ---p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f2e06591000-7f2e06595000 r--p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f2e06595000-7f2e06597000 rw-p 001eb000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f2e06597000-7f2e0659b000 rw-p 00000000 00:00 0 
+7f2e0659b000-7f2e065c2000 r-xp 00000000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f2e0678d000-7f2e0678f000 rw-p 00000000 00:00 0 
+7f2e067c2000-7f2e067c3000 r--p 00027000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f2e067c3000-7f2e067c4000 rw-p 00028000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f2e067c4000-7f2e067c5000 rw-p 00000000 00:00 0 
+7fff46603000-7fff46624000 rw-p 00000000 00:00 0                          [stack]
+7fff46739000-7fff4673c000 r--p 00000000 00:00 0                          [vvar]
+7fff4673c000-7fff4673e000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+*** succeeded to allocate memory: address = 0x7f2dffdaa000: size = 0x6400000 ***
+
+*** memory map after memory allocation ***
+5555e6ffc000-5555e6ffd000 r-xp 00000000 08:02 2105155                    ***/github/try_linux/chap5/bin/mmap
+5555e71fc000-5555e71fd000 r--p 00000000 08:02 2105155                    ***/github/try_linux/chap5/bin/mmap
+5555e71fd000-5555e71fe000 rw-p 00001000 08:02 2105155                    ***/github/try_linux/chap5/bin/mmap
+5555e8e7b000-5555e8e9c000 rw-p 00000000 00:00 0                          [heap]
+7f2dffdaa000-7f2e061aa000 rw-p 00000000 00:00 0 
+7f2e061aa000-7f2e06391000 r-xp 00000000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f2e06391000-7f2e06591000 ---p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f2e06591000-7f2e06595000 r--p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f2e06595000-7f2e06597000 rw-p 001eb000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f2e06597000-7f2e0659b000 rw-p 00000000 00:00 0 
+7f2e0659b000-7f2e065c2000 r-xp 00000000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f2e0678d000-7f2e0678f000 rw-p 00000000 00:00 0 
+7f2e067c2000-7f2e067c3000 r--p 00027000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f2e067c3000-7f2e067c4000 rw-p 00028000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f2e067c4000-7f2e067c5000 rw-p 00000000 00:00 0 
+7fff46603000-7fff46624000 rw-p 00000000 00:00 0                          [stack]
+7fff46739000-7fff4673c000 r--p 00000000 00:00 0                          [vvar]
+7fff4673c000-7fff4673e000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
