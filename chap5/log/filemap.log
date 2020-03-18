@@ -1,0 +1,47 @@
+*** memory map before mapping file ***
+5596a65ce000-5596a65cf000 r-xp 00000000 08:02 2105359                    ***/github/try_linux/chap5/bin/filemap
+5596a67cf000-5596a67d0000 r--p 00001000 08:02 2105359                    ***/github/try_linux/chap5/bin/filemap
+5596a67d0000-5596a67d1000 rw-p 00002000 08:02 2105359                    ***/github/try_linux/chap5/bin/filemap
+5596a74b9000-5596a74da000 rw-p 00000000 00:00 0                          [heap]
+7f9fb2213000-7f9fb23fa000 r-xp 00000000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f9fb23fa000-7f9fb25fa000 ---p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f9fb25fa000-7f9fb25fe000 r--p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f9fb25fe000-7f9fb2600000 rw-p 001eb000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f9fb2600000-7f9fb2604000 rw-p 00000000 00:00 0 
+7f9fb2604000-7f9fb262b000 r-xp 00000000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f9fb27f6000-7f9fb27f8000 rw-p 00000000 00:00 0 
+7f9fb282b000-7f9fb282c000 r--p 00027000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f9fb282c000-7f9fb282d000 rw-p 00028000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f9fb282d000-7f9fb282e000 rw-p 00000000 00:00 0 
+7ffc240e5000-7ffc24106000 rw-p 00000000 00:00 0                          [stack]
+7ffc24178000-7ffc2417b000 r--p 00000000 00:00 0                          [vvar]
+7ffc2417b000-7ffc2417d000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+*** succeded to map file: address = 0x7f9fabe13000 ; size = 6400000 ***
+
+*** memory map after mapping file ***
+5596a65ce000-5596a65cf000 r-xp 00000000 08:02 2105359                    ***/github/try_linux/chap5/bin/filemap
+5596a67cf000-5596a67d0000 r--p 00001000 08:02 2105359                    ***/github/try_linux/chap5/bin/filemap
+5596a67d0000-5596a67d1000 rw-p 00002000 08:02 2105359                    ***/github/try_linux/chap5/bin/filemap
+5596a74b9000-5596a74da000 rw-p 00000000 00:00 0                          [heap]
+7f9fabe13000-7f9fb2213000 rw-s 00000000 08:02 2105360                    ***/github/try_linux/chap5/log/testfile
+7f9fb2213000-7f9fb23fa000 r-xp 00000000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f9fb23fa000-7f9fb25fa000 ---p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f9fb25fa000-7f9fb25fe000 r--p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f9fb25fe000-7f9fb2600000 rw-p 001eb000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
+7f9fb2600000-7f9fb2604000 rw-p 00000000 00:00 0 
+7f9fb2604000-7f9fb262b000 r-xp 00000000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f9fb27f6000-7f9fb27f8000 rw-p 00000000 00:00 0 
+7f9fb282b000-7f9fb282c000 r--p 00027000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f9fb282c000-7f9fb282d000 rw-p 00028000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
+7f9fb282d000-7f9fb282e000 rw-p 00000000 00:00 0 
+7ffc240e5000-7ffc24106000 rw-p 00000000 00:00 0                          [stack]
+7ffc24178000-7ffc2417b000 r--p 00000000 00:00 0                          [vvar]
+7ffc2417b000-7ffc2417d000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+*** file contents before overwrite mapped region: hello
+
+*** overwritten mappd region with: HELLO
+
