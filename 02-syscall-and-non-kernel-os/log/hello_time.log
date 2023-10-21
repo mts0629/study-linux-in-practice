@@ -1,0 +1,35 @@
+execve("./bin/hello", ["./bin/hello"], 0x7ffea4d69ec8 /* 64 vars */) = 0 <0.000207>
+brk(NULL)                               = 0x559bf16f1000 <0.000019>
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe63f889c0) = -1 EINVAL (無効な引数です) <0.000011>
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (そのようなファイルやディレクトリはありません) <0.000015>
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000015>
+fstat(3, {st_mode=S_IFREG|0644, st_size=165453, ...}) = 0 <0.000010>
+mmap(NULL, 165453, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fc423412000 <0.000013>
+close(3)                                = 0 <0.000009>
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3 <0.000017>
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300A\2\0\0\0\0\0"..., 832) = 832 <0.000012>
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784 <0.000012>
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32 <0.000010>
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\346x\376T\245\322\302\t/\216G\353\v3\20^"..., 68, 880) = 68 <0.000010>
+fstat(3, {st_mode=S_IFREG|0755, st_size=2029592, ...}) = 0 <0.000009>
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc423410000 <0.000011>
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784 <0.000010>
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32 <0.000010>
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\346x\376T\245\322\302\t/\216G\353\v3\20^"..., 68, 880) = 68 <0.000010>
+mmap(NULL, 2037344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc42321e000 <0.000014>
+mmap(0x7fc423240000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7fc423240000 <0.000021>
+mmap(0x7fc4233b8000, 319488, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19a000) = 0x7fc4233b8000 <0.000018>
+mmap(0x7fc423406000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7fc423406000 <0.000016>
+mmap(0x7fc42340c000, 13920, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc42340c000 <0.000014>
+close(3)                                = 0 <0.000009>
+arch_prctl(ARCH_SET_FS, 0x7fc423411540) = 0 <0.000013>
+mprotect(0x7fc423406000, 16384, PROT_READ) = 0 <0.000015>
+mprotect(0x559bef92c000, 4096, PROT_READ) = 0 <0.000012>
+mprotect(0x7fc423468000, 4096, PROT_READ) = 0 <0.000013>
+munmap(0x7fc423412000, 165453)          = 0 <0.000020>
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0 <0.000011>
+brk(NULL)                               = 0x559bf16f1000 <0.000010>
+brk(0x559bf1712000)                     = 0x559bf1712000 <0.000011>
+write(1, "hello world\n", 12)           = 12 <0.000018>
+exit_group(0)                           = ?
++++ exited with 0 +++

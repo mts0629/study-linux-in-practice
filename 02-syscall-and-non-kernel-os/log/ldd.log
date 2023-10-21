@@ -1,0 +1,18 @@
+$ ldd /bin/echo 
+	linux-vdso.so.1 (0x00007ffd7a766000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f1514a0d000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f1514c35000)
+$ ldd ./bin/ppidloop 
+	linux-vdso.so.1 (0x00007ffde1bca000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f08f4428000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f08f464a000)
+$ ldd /usr/bin/python3
+	linux-vdso.so.1 (0x00007ffd2bf5f000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fc5cc6ca000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007fc5cc6a7000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007fc5cc6a1000)
+	libutil.so.1 => /lib/x86_64-linux-gnu/libutil.so.1 (0x00007fc5cc69c000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007fc5cc54d000)
+	libexpat.so.1 => /lib/x86_64-linux-gnu/libexpat.so.1 (0x00007fc5cc51f000)
+	libz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x00007fc5cc501000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fc5cc8e7000)

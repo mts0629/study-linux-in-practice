@@ -1,5 +1,0 @@
-execve("./hello.py", ["./hello.py"], 0x7ffdd2d61eb0 /* 58 vars */) = -1 EACCES (Permission denied)
-write(2, "strace: exec: Permission denied\n", 32) = 32
-getpid()                                = 6666
-exit_group(1)                           = ?
-+++ exited with 1 +++
