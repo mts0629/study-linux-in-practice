@@ -1,4 +1,5 @@
 #!/usr/bin/env python
 
-while True:
-    pass
+if __name__ == "__main__":
+    while True:
+        pass

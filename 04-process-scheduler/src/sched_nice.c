@@ -1,10 +1,3 @@
-// sched_nice.c
-// $ sched_nice (n) (total) (resol)
-// @args
-//      n:      num of runnning processes
-//      total:  total running time[ms]
-//      resol:  sampling time[ms]
-
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <time.h>
@@ -24,8 +17,7 @@ static inline long diff_nsec(struct timespec before, struct timespec after)
             - (before.tv_sec * NSECS_PER_SEC + before.tv_nsec));
 }
 
-// estimate loop counts per 1[ms]
-static unsigned long loops_per_msec()
+static unsigned long loops_per_msec(void)
 {
     struct timespec before, after;
 
@@ -126,18 +118,18 @@ int main(int argc, char *argv[])
         if (pids[i] < 0) {
             goto wait_children;
         } else if (pids[i] == 0) {
-            // children
+            // Children
             if (i == 1) {
                 nice(5);
             }
             child_fn(i, logbuf, nrecord, nloop_per_resol, start);
-            // shouldn't reach here
+            // Shouldn't reach here
         }
     }
 
     ret = EXIT_SUCCESS;
 
-// parent
+// Parent
 wait_children:
     if (ret == EXIT_FAILURE) {
         for (i = 0; i < ncreated; i++) {
@@ -160,4 +152,3 @@ free_logbuf:
     free(logbuf);
     exit(ret);
 }
-

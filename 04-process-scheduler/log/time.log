@@ -1,0 +1,60 @@
+$ time taskset -c 0 ./bin/sched 1 10000 10000
+0	11365	100
+
+real	0m13.836s
+user	0m13.835s
+sys	0m0.000s
+
+$ time taskset -c 0 ./bin/sched 2 10000 10000
+0	22960	100
+1	22970	100
+
+real	0m25.449s
+user	0m25.446s
+sys	0m0.000s
+
+$ time taskset -c 0,2 ./bin/sched 1 10000 10000
+0	10396	100
+
+real	0m12.905s
+user	0m12.900s
+sys	0m0.004s
+
+$ time taskset -c 0,2 ./bin/sched 2 10000 10000
+0	11427	100
+1	11554	100
+
+real	0m14.030s
+user	0m25.456s
+sys	0m0.000s
+
+-----
+
+$ time sleep 10
+
+real	0m10.003s
+user	0m0.002s
+sys	0m0.001s
+
+-----
+
+$ taskset -c 0 python3 ./src/loop.py &
+[1] 27811
+$ ps -eo pid,comm,etime,time | grep python3
+  27811 python3               00:16 00:00:16
+
+$ taskset -c 0 python3 ./src/loop.py &
+[1] 27824
+$ taskset -c 0 python3 ./src/loop.py &
+[2] 27825
+$ ps -eo pid,comm,etime,time | grep python3
+  27824 python3               00:11 00:00:06
+  27825 python3               00:08 00:00:03
+
+$ taskset -c 0,2 python3 ./src/loop.py &
+[3] 27831
+$ taskset -c 0,2 python3 ./src/loop.py &
+[4] 27832
+$ ps -eo pid,comm,etime,time | grep python3
+  27831 python3               00:09 00:00:09
+  27832 python3               00:06 00:00:06
