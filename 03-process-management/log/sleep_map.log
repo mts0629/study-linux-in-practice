@@ -1,0 +1,26 @@
+$ /bin/sleep 10000 &
+[1] 13515
+$ cat /proc/13515/maps 
+55e866cca000-55e866ccc000 r--p 00000000 08:02 5642526                    /bin/sleep
+55e866ccc000-55e866cd0000 r-xp 00002000 08:02 5642526                    /bin/sleep
+55e866cd0000-55e866cd2000 r--p 00006000 08:02 5642526                    /bin/sleep
+55e866cd3000-55e866cd4000 r--p 00008000 08:02 5642526                    /bin/sleep
+55e866cd4000-55e866cd5000 rw-p 00009000 08:02 5642526                    /bin/sleep
+55e8688bd000-55e8688de000 rw-p 00000000 00:00 0                          [heap]
+7fa23d60e000-7fa23dc81000 r--p 00000000 08:02 924313                     /usr/lib/locale/locale-archive
+7fa23dc81000-7fa23dca3000 r--p 00000000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fa23dca3000-7fa23de1b000 r-xp 00022000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fa23de1b000-7fa23de69000 r--p 0019a000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fa23de69000-7fa23de6d000 r--p 001e7000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fa23de6d000-7fa23de6f000 rw-p 001eb000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fa23de6f000-7fa23de75000 rw-p 00000000 00:00 0 
+7fa23de9e000-7fa23de9f000 r--p 00000000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fa23de9f000-7fa23dec2000 r-xp 00001000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fa23dec2000-7fa23deca000 r--p 00024000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fa23decb000-7fa23decc000 r--p 0002c000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fa23decc000-7fa23decd000 rw-p 0002d000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fa23decd000-7fa23dece000 rw-p 00000000 00:00 0 
+7fffaf81d000-7fffaf83e000 rw-p 00000000 00:00 0                          [stack]
+7fffaf9ec000-7fffaf9ef000 r--p 00000000 00:00 0                          [vvar]
+7fffaf9ef000-7fffaf9f0000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]

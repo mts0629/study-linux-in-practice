@@ -1,0 +1,7 @@
+$ ./bin/fork
+I'm parent! my pid is 13007 and the pid of my child is 13008.
+I'm child! my pid is 13008.
+
+$ ./bin/fork_and_exec 
+I'm parent! my pid is 13684 and the pid of my child is 13685.
+I'm child! my pid is 13685.
