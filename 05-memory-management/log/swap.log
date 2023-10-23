@@ -1,0 +1,24 @@
+$ swapon --show
+NAME      TYPE SIZE  USED PRIO
+/swapfile file   2G 14.9M   -2
+
+$ free
+              total        used        free      shared  buff/cache   available
+Mem:        8036280     3336960     1414444      202368     3284876     4183708
+Swap:       2097148       15232     2081916
+
+$ sar -W 1
+Linux 5.4.0-165-generic (***) 	2023年10月23日 	_x86_64_	(4 CPU)
+
+23時25分15秒  pswpin/s pswpout/s
+23時25分16秒      0.00      0.00
+23時25分17秒      0.00      0.00
+23時25分18秒      0.00      0.00
+
+$ sar -S 1
+Linux 5.4.0-165-generic (***) 	2023年10月23日 	_x86_64_	(4 CPU)
+
+23時25分57秒 kbswpfree kbswpused  %swpused  kbswpcad   %swpcad
+23時25分58秒   2081916     15232      0.73       920      6.04
+23時25分59秒   2081916     15232      0.73       920      6.04
+23時26分00秒   2081916     15232      0.73       920      6.04

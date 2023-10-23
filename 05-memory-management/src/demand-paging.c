@@ -1,7 +1,3 @@
-///
-/// demand_paging.c
-/// test of demand paging
-///
 #include <unistd.h>
 #include <time.h>
 #include <stdio.h>
@@ -41,7 +37,7 @@ int main(void)
         if ((cycle != 0) && (i % (BUFFER_SIZE / NCYCLE) == 0)) {
             t = time(NULL);
             s = ctime(&t);
-            printf("%.*s: touched %dMB.  please press Enter key\n", (int)(strlen(s) - 1), s, i / (1024 * 1024));
+            printf("%.*s: touched %dMB.\n", (int)(strlen(s) - 1), s, i / (1024 * 1024));
             sleep(1);
         }
     }

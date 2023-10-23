@@ -1,7 +1,3 @@
-///
-/// filemap.c
-/// display filemap
-///
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -23,7 +19,6 @@ int main(void)
 {
     pid_t pid = getpid();
 
-    // command: display memory map of this process
     snprintf(command, BUFFER_SIZE, "cat /proc/%d/maps", pid);
 
     puts("*** memory map before mapping file ***");
@@ -35,7 +30,7 @@ int main(void)
         err(EXIT_FAILURE, "open() failed");
     }
 
-    // mapping file to memory
+    // Mapping file to memory
     char* file_contents = mmap(NULL, ALLOC_SIZE, (PROT_READ | PROT_WRITE), MAP_SHARED, fd, 0);
     if (file_contents == (void*)-1) {
         warn("mmap() failed");
@@ -53,7 +48,7 @@ int main(void)
     puts("");
     printf("*** file contents before overwrite mapped region: %s", file_contents);
 
-    // overwrite mapped region
+    // Overwrite mapped region
     memcpy(file_contents, overwrite_data, strlen(overwrite_data));
 
     puts("");

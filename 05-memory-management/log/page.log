@@ -1,0 +1,10 @@
+$ sar -r ALL 1
+Linux 5.4.0-165-generic (***) 	2023年10月23日 	_x86_64_	(4 CPU)
+
+23時29分48秒 kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty  kbanonpg    kbslab  kbkstack   kbpgtbl  kbvmused
+23時29分49秒   1423660   4194800   3175600     39.52    354264   2632268   8279440     81.70   4637104   1365248       412   3070128    450488     11696     25792     32336
+23時29分50秒   1424488   4195628   3174968     39.51    354268   2632068   8279440     81.70   4636548   1365248       412   3069572    450488     11696     25784     32336
+23時29分51秒   1424488   4195628   3175128     39.51    354268   2631908   8279440     81.70   4636548   1365248       428   3069572    450488     11696     25784     32336
+
+$ cat /sys/kernel/mm/transparent_hugepage/enabled 
+always [madvise] never

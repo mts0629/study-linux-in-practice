@@ -1,0 +1,17 @@
+$ ./bin/cow 
+*** free memory info before fork ***:
+              total        used        free      shared  buff/cache   available
+Mem:        8036280     3339144     1030280      206152     3666856     4177744
+Swap:       2097148        5632     2091516
+*** child ps info before memory access ***:
+  34041 cow             104896 103320    24      0
+*** free memory info before memory access ***:
+              total        used        free      shared  buff/cache   available
+Mem:        8036280     3339608     1029816      206152     3666856     4177280
+Swap:       2097148        5632     2091516
+*** child ps info after memory access ***:
+  34041 cow             104896 103320 25626      0
+*** free memory info after memory access ***:
+              total        used        free      shared  buff/cache   available
+Mem:        8036280     3440400      929016      206152     3666864     4076480
+Swap:       2097148        5632     2091516

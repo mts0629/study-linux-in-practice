@@ -1,47 +1,55 @@
+$ ./bin/filemap 
 *** memory map before mapping file ***
-5596a65ce000-5596a65cf000 r-xp 00000000 08:02 2105359                    ***/github/try_linux/chap5/bin/filemap
-5596a67cf000-5596a67d0000 r--p 00001000 08:02 2105359                    ***/github/try_linux/chap5/bin/filemap
-5596a67d0000-5596a67d1000 rw-p 00002000 08:02 2105359                    ***/github/try_linux/chap5/bin/filemap
-5596a74b9000-5596a74da000 rw-p 00000000 00:00 0                          [heap]
-7f9fb2213000-7f9fb23fa000 r-xp 00000000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
-7f9fb23fa000-7f9fb25fa000 ---p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
-7f9fb25fa000-7f9fb25fe000 r--p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
-7f9fb25fe000-7f9fb2600000 rw-p 001eb000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
-7f9fb2600000-7f9fb2604000 rw-p 00000000 00:00 0 
-7f9fb2604000-7f9fb262b000 r-xp 00000000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
-7f9fb27f6000-7f9fb27f8000 rw-p 00000000 00:00 0 
-7f9fb282b000-7f9fb282c000 r--p 00027000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
-7f9fb282c000-7f9fb282d000 rw-p 00028000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
-7f9fb282d000-7f9fb282e000 rw-p 00000000 00:00 0 
-7ffc240e5000-7ffc24106000 rw-p 00000000 00:00 0                          [stack]
-7ffc24178000-7ffc2417b000 r--p 00000000 00:00 0                          [vvar]
-7ffc2417b000-7ffc2417d000 r-xp 00000000 00:00 0                          [vdso]
-ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+55d15cf05000-55d15cf06000 r--p 00000000 08:02 2107453                    /***/github/study-linux-in-practice/05-memory-management/bin/filemap
+55d15cf06000-55d15cf07000 r-xp 00001000 08:02 2107453                    /***/github/study-linux-in-practice/05-memory-management/bin/filemap
+55d15cf07000-55d15cf08000 r--p 00002000 08:02 2107453                    /***/github/study-linux-in-practice/05-memory-management/bin/filemap
+55d15cf08000-55d15cf09000 r--p 00002000 08:02 2107453                    /***/github/study-linux-in-practice/05-memory-management/bin/filemap
+55d15cf09000-55d15cf0a000 rw-p 00003000 08:02 2107453                    /***/github/study-linux-in-practice/05-memory-management/bin/filemap
+55d15d4a1000-55d15d4c2000 rw-p 00000000 00:00 0                          [heap]
+7fc082012000-7fc082034000 r--p 00000000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fc082034000-7fc0821ac000 r-xp 00022000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fc0821ac000-7fc0821fa000 r--p 0019a000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fc0821fa000-7fc0821fe000 r--p 001e7000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fc0821fe000-7fc082200000 rw-p 001eb000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fc082200000-7fc082206000 rw-p 00000000 00:00 0 
+7fc08222f000-7fc082230000 r--p 00000000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fc082230000-7fc082253000 r-xp 00001000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fc082253000-7fc08225b000 r--p 00024000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fc08225c000-7fc08225d000 r--p 0002c000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fc08225d000-7fc08225e000 rw-p 0002d000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fc08225e000-7fc08225f000 rw-p 00000000 00:00 0 
+7ffd23d03000-7ffd23d24000 rw-p 00000000 00:00 0                          [stack]
+7ffd23d92000-7ffd23d95000 r--p 00000000 00:00 0                          [vvar]
+7ffd23d95000-7ffd23d96000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
 
-*** succeded to map file: address = 0x7f9fabe13000 ; size = 6400000 ***
+*** succeded to map file: address = 0x7fc07bc12000 ; size = 6400000 ***
 
 *** memory map after mapping file ***
-5596a65ce000-5596a65cf000 r-xp 00000000 08:02 2105359                    ***/github/try_linux/chap5/bin/filemap
-5596a67cf000-5596a67d0000 r--p 00001000 08:02 2105359                    ***/github/try_linux/chap5/bin/filemap
-5596a67d0000-5596a67d1000 rw-p 00002000 08:02 2105359                    ***/github/try_linux/chap5/bin/filemap
-5596a74b9000-5596a74da000 rw-p 00000000 00:00 0                          [heap]
-7f9fabe13000-7f9fb2213000 rw-s 00000000 08:02 2105360                    ***/github/try_linux/chap5/log/testfile
-7f9fb2213000-7f9fb23fa000 r-xp 00000000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
-7f9fb23fa000-7f9fb25fa000 ---p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
-7f9fb25fa000-7f9fb25fe000 r--p 001e7000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
-7f9fb25fe000-7f9fb2600000 rw-p 001eb000 08:02 4461220                    /lib/x86_64-linux-gnu/libc-2.27.so
-7f9fb2600000-7f9fb2604000 rw-p 00000000 00:00 0 
-7f9fb2604000-7f9fb262b000 r-xp 00000000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
-7f9fb27f6000-7f9fb27f8000 rw-p 00000000 00:00 0 
-7f9fb282b000-7f9fb282c000 r--p 00027000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
-7f9fb282c000-7f9fb282d000 rw-p 00028000 08:02 4461192                    /lib/x86_64-linux-gnu/ld-2.27.so
-7f9fb282d000-7f9fb282e000 rw-p 00000000 00:00 0 
-7ffc240e5000-7ffc24106000 rw-p 00000000 00:00 0                          [stack]
-7ffc24178000-7ffc2417b000 r--p 00000000 00:00 0                          [vvar]
-7ffc2417b000-7ffc2417d000 r-xp 00000000 00:00 0                          [vdso]
-ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+55d15cf05000-55d15cf06000 r--p 00000000 08:02 2107453                    /***/github/study-linux-in-practice/05-memory-management/bin/filemap
+55d15cf06000-55d15cf07000 r-xp 00001000 08:02 2107453                    /***/github/study-linux-in-practice/05-memory-management/bin/filemap
+55d15cf07000-55d15cf08000 r--p 00002000 08:02 2107453                    /***/github/study-linux-in-practice/05-memory-management/bin/filemap
+55d15cf08000-55d15cf09000 r--p 00002000 08:02 2107453                    /***/github/study-linux-in-practice/05-memory-management/bin/filemap
+55d15cf09000-55d15cf0a000 rw-p 00003000 08:02 2107453                    /***/github/study-linux-in-practice/05-memory-management/bin/filemap
+55d15d4a1000-55d15d4c2000 rw-p 00000000 00:00 0                          [heap]
+7fc07bc12000-7fc082012000 rw-s 00000000 08:02 2105380                    /***/github/study-linux-in-practice/05-memory-management/log/testfile
+7fc082012000-7fc082034000 r--p 00000000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fc082034000-7fc0821ac000 r-xp 00022000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fc0821ac000-7fc0821fa000 r--p 0019a000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fc0821fa000-7fc0821fe000 r--p 001e7000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fc0821fe000-7fc082200000 rw-p 001eb000 08:02 4458028                    /lib/x86_64-linux-gnu/libc-2.31.so
+7fc082200000-7fc082206000 rw-p 00000000 00:00 0 
+7fc08222f000-7fc082230000 r--p 00000000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fc082230000-7fc082253000 r-xp 00001000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fc082253000-7fc08225b000 r--p 00024000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fc08225c000-7fc08225d000 r--p 0002c000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fc08225d000-7fc08225e000 rw-p 0002d000 08:02 4457517                    /lib/x86_64-linux-gnu/ld-2.31.so
+7fc08225e000-7fc08225f000 rw-p 00000000 00:00 0 
+7ffd23d03000-7ffd23d24000 rw-p 00000000 00:00 0                          [stack]
+7ffd23d92000-7ffd23d95000 r--p 00000000 00:00 0                          [vvar]
+7ffd23d95000-7ffd23d96000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
 
 *** file contents before overwrite mapped region: hello
 
 *** overwritten mappd region with: HELLO
-
