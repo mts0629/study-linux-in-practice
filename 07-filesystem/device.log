@@ -1,0 +1,15 @@
+$ ls -l /dev
+合計 0
+# ...
+brw-rw----  1 root disk      8,   0 10月 21 22:03 sda
+# ...
+crw-rw-rw-  1 root tty       5,   0 10月 21 22:03 tty
+# ...
+
+---
+
+$ ps ax | grep bash | grep -v grep
+  64680 pts/0    Ss     0:00 bash
+
+# root@***# echo hello > /dev/pts/0
+hello

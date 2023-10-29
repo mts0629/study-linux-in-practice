@@ -1,0 +1,12 @@
+$ mount | grep ^tmpfs
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=803628k,mode=755)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,mode=755)
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=803628k,mode=700,uid=1000,gid=1000)
+
+$ free
+              total        used        free      shared  buff/cache   available
+Mem:        8036280     3505516      644144      428792     3886620     3784648
+Swap:       2097148       50760     2046388
+

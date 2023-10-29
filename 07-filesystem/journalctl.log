@@ -1,0 +1,58 @@
+$ journalctl -k
+-- Logs begin at Fri 2022-11-04 01:55:01 JST, end at Sun 2023-10-29 16:16:39 JST. --
+10月 21 22:03:48 *** kernel: microcode: microcode updated early to revision 0x2f, date = 20>
+10月 21 22:03:48 *** kernel: Linux version 5.4.0-165-generic (buildd@lcy02-amd64-078) (gcc >
+10月 21 22:03:48 *** kernel: Command line: BOOT_IMAGE=/boot/vmlinuz-5.4.0-165-generic root=>
+10月 21 22:03:48 *** kernel: KERNEL supported cpus:
+10月 21 22:03:48 *** kernel:   Intel GenuineIntel
+10月 21 22:03:48 *** kernel:   AMD AuthenticAMD
+10月 21 22:03:48 *** kernel:   Hygon HygonGenuine
+10月 21 22:03:48 *** kernel:   Centaur CentaurHauls
+10月 21 22:03:48 *** kernel:   zhaoxin   Shanghai  
+10月 21 22:03:48 *** kernel: BIOS-provided physical RAM map:
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009ebff] usable
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x000000000009ec00-0x000000000009ffff] reserved
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x00000000000e0000-0x00000000000fffff] reserved
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x0000000000100000-0x000000001fffffff] usable
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x0000000020000000-0x00000000201fffff] reserved
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x0000000020200000-0x000000003fffffff] usable
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x0000000040000000-0x00000000401fffff] reserved
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x0000000040200000-0x00000000aa5cffff] usable
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x00000000aa5d0000-0x00000000aa5d01ff] ACPI NVS
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x00000000aa5d0200-0x00000000aa5d2fff] reserved
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x00000000aa5d3000-0x00000000aa6cffff] ACPI NVS
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x00000000aa6d0000-0x00000000aa6effff] ACPI da>
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x00000000aa6f0000-0x00000000af9fffff] reserved
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x00000000f8000000-0x00000000fbffffff] reserved
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x00000000fed10000-0x00000000fed19fff] reserved
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x00000000fed1c000-0x00000000fed1ffff] reserved
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x00000000ffc00000-0x00000000ffffffff] reserved
+10月 21 22:03:48 *** kernel: BIOS-e820: [mem 0x0000000100000000-0x000000024fdfffff] usable
+10月 21 22:03:48 *** kernel: NX (Execute Disable) protection: active
+10月 21 22:03:48 *** kernel: SMBIOS 2.5 present.
+10月 21 22:03:48 *** kernel: DMI: ***, BIOS Version 2.80   >
+10月 21 22:03:48 *** kernel: tsc: Fast TSC calibration failed
+10月 21 22:03:48 *** kernel: e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+10月 21 22:03:48 *** kernel: e820: remove [mem 0x000a0000-0x000fffff] usable
+10月 21 22:03:48 *** kernel: last_pfn = 0x24fe00 max_arch_pfn = 0x400000000
+10月 21 22:03:48 *** kernel: MTRR default type: uncachable
+10月 21 22:03:48 *** kernel: MTRR fixed ranges enabled:
+10月 21 22:03:48 *** kernel:   00000-9FFFF write-back
+10月 21 22:03:48 *** kernel:   A0000-BFFFF uncachable
+10月 21 22:03:48 *** kernel:   C0000-CFFFF write-protect
+10月 21 22:03:48 *** kernel:   D0000-DFFFF uncachable
+10月 21 22:03:48 *** kernel:   E0000-EFFFF write-through
+10月 21 22:03:48 *** kernel:   F0000-FFFFF write-protect
+10月 21 22:03:48 *** kernel: MTRR variable ranges enabled:
+10月 21 22:03:48 *** kernel:   0 base 0FFC00000 mask FFFC00000 uncachable
+10月 21 22:03:48 *** kernel:   1 base 000000000 mask F80000000 write-back
+10月 21 22:03:48 *** kernel:   2 base 080000000 mask FC0000000 write-back
+10月 21 22:03:48 *** kernel:   3 base 0B0000000 mask FF0000000 uncachable
+10月 21 22:03:48 *** kernel:   4 base 0AC000000 mask FFC000000 uncachable
+10月 21 22:03:48 *** kernel:   5 base 0AB800000 mask FFF800000 uncachable
+10月 21 22:03:48 *** kernel:   6 base 100000000 mask F00000000 write-back
+10月 21 22:03:48 *** kernel:   7 base 200000000 mask F80000000 write-back
+10月 21 22:03:48 *** kernel:   8 disabled
+10月 21 22:03:48 *** kernel:   9 disabled
