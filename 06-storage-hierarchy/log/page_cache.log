@@ -1,0 +1,65 @@
+$ dd if=/dev/zero of=testfile oflag=direct bs=1M count=1K
+1024+0 レコード入力
+1024+0 レコード出力
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 47.0915 s, 22.8 MB/s
+
+$ free
+              total        used        free      shared  buff/cache   available
+Mem:        8036280     3288552      725036      262092     4022692     4171964
+Swap:       2097148       37744     2059404
+
+$ time cat testfile > /dev/null
+
+real	0m5.412s
+user	0m0.029s
+sys	0m1.330s
+
+$ free
+              total        used        free      shared  buff/cache   available
+Mem:        8036280     3282744      125384      261380     4628152     4177852
+Swap:       2097148       39024     2058124
+
+$ time cat testfile > /dev/null
+
+real	0m0.189s
+user	0m0.017s
+sys	0m0.172s
+
+$ free
+              total        used        free      shared  buff/cache   available
+Mem:        8036280     3282020      125884      261380     4628376     4178576
+Swap:       2097148       39024     2058124
+
+---
+
+$ sar -r 1
+Linux 5.4.0-165-generic (***) 	2023年10月29日 	_x86_64_	(4 CPU)
+
+00時03分10秒 kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+00時03分11秒    124780   4177788   3127308     38.91    263184   4032548   8547216     84.35   5608916   1655816       312
+00時03分12秒    124812   4177820   3127268     38.91    263184   4032556   8547216     84.35   5608916   1655816       312
+00時03分13秒    124780   4177788   3127448     38.92    263184   4032408   8547216     84.35   5608960   1655816       312
+^C
+
+平均値:     124791   4177799   3127341     38.92    263184   4032504   8547216     84.35   5608931   1655816       312
+
+---
+
+$ time dd if=/dev/zero of=testfile oflag=direct bs=1M count=1K
+1024+0 レコード入力
+1024+0 レコード出力
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 46.5553 s, 23.1 MB/s
+
+real	0m46.559s
+user	0m0.013s
+sys	0m1.051s
+
+$ rm testfile
+$ time dd if=/dev/zero of=testfile bs=1M count=1K
+1024+0 レコード入力
+1024+0 レコード出力
+1073741824 bytes (1.1 GB, 1.0 GiB) copied, 14.9694 s, 71.7 MB/s
+
+real	0m14.973s
+user	0m0.010s
+sys	0m1.723s

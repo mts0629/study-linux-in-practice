@@ -1,0 +1,41 @@
+$ cat /sys/devices/system/cpu/cpu0/cache/index0/
+coherency_line_size      physical_line_partition  type
+id                       shared_cpu_list          uevent
+level                    shared_cpu_map           ways_of_associativity
+number_of_sets           size
+
+$ cat /sys/devices/system/cpu/cpu0/cache/index0/type 
+Data
+$ cat /sys/devices/system/cpu/cpu0/cache/index0/shared_cpu_list 
+0-1
+$ cat /sys/devices/system/cpu/cpu0/cache/index0/size 
+32K
+$ cat /sys/devices/system/cpu/cpu0/cache/index0/coherency_line_size 
+64
+
+$ cat /sys/devices/system/cpu/cpu0/cache/index1/type 
+Instruction
+$ cat /sys/devices/system/cpu/cpu0/cache/index1/shared_cpu_list 
+0-1
+$ cat /sys/devices/system/cpu/cpu0/cache/index1/size 
+32K
+$ cat /sys/devices/system/cpu/cpu0/cache/index1/coherency_line_size 
+64
+
+$ cat /sys/devices/system/cpu/cpu0/cache/index2/type 
+Unified
+$ cat /sys/devices/system/cpu/cpu0/cache/index2/shared_cpu_list 
+0-1
+$ cat /sys/devices/system/cpu/cpu0/cache/index2/size 
+256K
+$ cat /sys/devices/system/cpu/cpu0/cache/index2/coherency_line_size 
+64
+
+$ cat /sys/devices/system/cpu/cpu0/cache/index3/type 
+Unified
+$ cat /sys/devices/system/cpu/cpu0/cache/index3/shared_cpu_list 
+0-3
+$ cat /sys/devices/system/cpu/cpu0/cache/index3/size 
+3072K
+$ cat /sys/devices/system/cpu/cpu0/cache/index3/coherency_line_size 
+64

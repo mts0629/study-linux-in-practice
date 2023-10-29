@@ -1,0 +1,10 @@
+$ sysctl vm.dirty_writeback_centisecs
+vm.dirty_writeback_centisecs = 500
+.dirty_background_ratio
+vm.dirty_background_ratio = 10
+$ sysctl vm.dirty_bytes
+vm.dirty_bytes = 0
+$ sysctl vm.dirty_ratio
+vm.dirty_ratio = 20
+$ sysctl vm.dirty_bytes
+vm.dirty_bytes = 0
